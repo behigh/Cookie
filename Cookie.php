@@ -48,16 +48,17 @@ class Cookie
 	private function __construct(){}
 
 	/**
-	 * @param array $opts Array of options. Supported keys:
-	 *              * 'path' - The path on the server in which the cookie will be available on. If set to '/', the cookie will be available within the entire domain.
+	 * @param array $opts Array of options. Supported keys:<ul>
+	 *              <li>'path' - The path on the server in which the cookie will be available on.
+	 *                         If set to '/', the cookie will be available within the entire domain.
 	 *                         If set to '/foo/', the cookie will only be available within the /foo/ directory and all sub-directories such as /foo/bar/ of domain.
-	 *                         Default value is: /
-	 *              * 'domain' - The domain that the cookie is available to.
+	 *                         Default value is: /<br>
+	 *              <li>'domain' - The domain that the cookie is available to.
 	 *                           Setting the domain to 'www.example.com' will make the cookie available in the www subdomain and higher subdomains.
 	 *                           Cookies available to a lower domain, such as 'example.com' will be available to higher subdomains, such as 'www.example.com'.
 	 *                           Older browsers still implementing the deprecated » RFC 2109 may require a leading . to match all subdomains.
-	 *                           Default value is '.' + $_SERVER['SERVER_NAME'] [www is omitted]
-	 *              * 'prefix' - Prefix for cookies. See: self::$prefix
+	 *                           Default value is '.' + $_SERVER['SERVER_NAME'] [www is omitted]<br>
+	 *              <li>'prefix' - Prefix for cookies. See: self::$prefix
 	 */
 	public static function init(array $opts = array())
 	{
@@ -126,11 +127,11 @@ class Cookie
 	 * @param string $name The name of the cookie.
 	 * @param string $value The value of the cookie. This value is stored on the clients computer; do not store sensitive information.
 	 *                      Assuming the name is 'cookiename', this value is retrieved through $_COOKIE['cookiename'] or Cookie::get('cookiename')
-	 * @param bool|string|int $expire The time the cookie expires. Possible values:
-	 *                                true - set cookie permanently
-	 *                                false - set cookie for current session only
-	 *                                int - The number of seconds to add to the current time
-	 *                                string - Relative DateTime Formats (ex: '+3 days', '+1 week' etc.)
+	 * @param bool|string|int $expire The time the cookie expires. Possible values:<br>
+	 *                                <strong>true</strong> - set cookie permanently<br>
+	 *                                <strong>false</strong> - set cookie for current session only<br>
+	 *                                <strong>int</strong> - The number of seconds to add to the current time<br>
+	 *                                <strong>string</strong> - Relative DateTime Formats (ex: '+3 days', '+1 week' etc.)<br>
 	 *                                         See http://es.php.net/manual/en/datetime.formats.relative.php
 	 * @param bool $httponly When TRUE the cookie will be made accessible only through the HTTP protocol.
 	 *                       This means that the cookie won't be accessible by scripting languages, such as JavaScript.
