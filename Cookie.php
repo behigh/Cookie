@@ -1,11 +1,5 @@
 <?php
 /**
- * User: Polo
- * Date: 20.12.11
- * Time: 15:22 +1GMT
- */
-
-/**
  * Cookie wrapper class
  *
  * all documentation text is from http://php.net/setcookie
@@ -55,15 +49,15 @@ class Cookie
 
 	/**
 	 * @param array $opts Array of options. Supported keys:
-	 * 					* 'path' - The path on the server in which the cookie will be available on. If set to '/', the cookie will be available within the entire domain.
-	 * 							   If set to '/foo/', the cookie will only be available within the /foo/ directory and all sub-directories such as /foo/bar/ of domain.
-	 *                             Default value is: /
-	 * 					* 'domain' - The domain that the cookie is available to.
-	 * 								 Setting the domain to 'www.example.com' will make the cookie available in the www subdomain and higher subdomains.
-	 * 								 Cookies available to a lower domain, such as 'example.com' will be available to higher subdomains, such as 'www.example.com'.
-	 *                               Older browsers still implementing the deprecated » RFC 2109 may require a leading . to match all subdomains.
-	 * 	                             Default value is '.' + $_SERVER['SERVER_NAME'] [www is omitted]
-	 * 					* 'prefix' - Prefix for cookies. See: self::$prefix
+	 *              * 'path' - The path on the server in which the cookie will be available on. If set to '/', the cookie will be available within the entire domain.
+	 *                         If set to '/foo/', the cookie will only be available within the /foo/ directory and all sub-directories such as /foo/bar/ of domain.
+	 *                         Default value is: /
+	 *              * 'domain' - The domain that the cookie is available to.
+	 *                           Setting the domain to 'www.example.com' will make the cookie available in the www subdomain and higher subdomains.
+	 *                           Cookies available to a lower domain, such as 'example.com' will be available to higher subdomains, such as 'www.example.com'.
+	 *                           Older browsers still implementing the deprecated » RFC 2109 may require a leading . to match all subdomains.
+	 *                           Default value is '.' + $_SERVER['SERVER_NAME'] [www is omitted]
+	 *              * 'prefix' - Prefix for cookies. See: self::$prefix
 	 */
 	public static function init(array $opts = array())
 	{
