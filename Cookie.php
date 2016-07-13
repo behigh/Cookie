@@ -117,7 +117,7 @@ class Cookie
 	 * @param string $name
 	 * @return string
 	 */
-	public function realname($name)
+	public static function realname($name)
 	{
 		return self::$prefix . $name;
 	}
